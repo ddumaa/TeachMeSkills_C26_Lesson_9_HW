@@ -5,6 +5,10 @@ import homework.task_1.figure.Circle;
 import homework.task_1.figure.Rectangle;
 import homework.task_1.figure.Triangle;
 
+/**
+ * Усовершенствовать задание с фигурами
+ * Использовать модификатор Sealed для класса "Фигура".
+ */
 public class Runner {
     public static void main(String[] args) {
         Triangle triangle1 = new Triangle(7, 3, 12);
