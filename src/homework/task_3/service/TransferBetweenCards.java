@@ -6,6 +6,8 @@ public class TransferBetweenCards {
     public static void transferMoney(int idCard_1, int idCard_2, double summaTransfer){
         if (idCard_1 > Client.carts.length || idCard_2 > Client.carts.length){
             System.out.println("There is no such card");
+        } else if (summaTransfer < 10) {
+            System.out.println("The transfer amount is less than the minimum value.");
         } else if (Client.carts[idCard_1] == Client.carts[idCard_2]) {
             System.out.println("Translation is not possible");
         } else if (Client.carts[idCard_1].balance - summaTransfer - (Client.carts[idCard_1].balance * Client.carts[idCard_1].commission / 100)  < 0){
