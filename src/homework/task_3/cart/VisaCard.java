@@ -1,6 +1,6 @@
 package homework.task_3.cart;
 
-public class VisaCard extends BaseCart {
+public class VisaCard extends BaseCard {
     public static int limit = 1000;
     public static double commission = 1;
     public static String currency = "Euro";

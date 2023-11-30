@@ -1,6 +1,6 @@
 package homework.task_3.cart;
 
-public abstract class BaseCart {
+public abstract class BaseCard {
     public  long cardNumber;
     public  int cvv;
     public  double balance;
@@ -9,7 +9,7 @@ public abstract class BaseCart {
     public  double commission;
     public  String currency;
 
-    public BaseCart(long cardNumber, int cvv, double balance, long idCart, int limit, double commission, String currency) {
+    public BaseCard(long cardNumber, int cvv, double balance, long idCart, int limit, double commission, String currency) {
         this.cardNumber = cardNumber;
         this.cvv = cvv;
         this.balance = balance;

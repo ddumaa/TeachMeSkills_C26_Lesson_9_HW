@@ -1,6 +1,6 @@
 package homework.task_3.cart;
 
-public class BelCard extends BaseCart {
+public class BelCard extends BaseCard {
     public static int limit = 3000;
     public  static double commission = 1.5;
     public static String currency = "BYN";
