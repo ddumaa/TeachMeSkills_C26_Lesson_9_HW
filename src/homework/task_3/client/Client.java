@@ -29,6 +29,6 @@ public class Client extends AddressInfo {
     static BaseCard masterCard1Client_1 = new MasterCard(3214_7851_0000_4158l, 178, 102.3, 4, MasterCard.limit, MasterCard.commission, MasterCard.currency);
     static BaseCard masterCard2Client_1 = new MasterCard(3408_1483_0000_3491l, 324, 505, 5, MasterCard.limit, MasterCard.commission, MasterCard.currency);
 
-    public static BaseCard[] carts = new BaseCard[]{belCart1Client_1, belCart2Client_1, visaCard1Client_1, visaCard2Client_1,
+    public static BaseCard[] cards = new BaseCard[]{belCart1Client_1, belCart2Client_1, visaCard1Client_1, visaCard2Client_1,
             masterCard1Client_1, masterCard2Client_1};
 }

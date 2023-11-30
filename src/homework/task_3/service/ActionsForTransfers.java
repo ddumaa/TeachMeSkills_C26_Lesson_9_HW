@@ -7,16 +7,16 @@ public abstract class ActionsForTransfers {
         System.out.println(Client.client_1.firstName + " " + Client.client_1.lastName);
     }
     public static void infoClientCartStock(){
-        System.out.println("cards in stock: " + Client.carts.length);
+        System.out.println("cards in stock: " + Client.cards.length);
     }
     public static void infoBalanceCartBeforeT(int id){
-        System.out.println("balance before transfer: " + Client.carts[id].balance);
+        System.out.println("balance before transfer: " + Client.cards[id].balance);
     }
     public static void infoBalanceCartAfterT(int id){
-        System.out.println("balance after transfer: " + Client.carts[id].balance);
+        System.out.println("balance after transfer: " + Client.cards[id].balance);
     }
     public static void balanceWithdrawal(int id, double sum){
-        Client.carts[id].balance -= (sum + (sum * Client.carts[id].commission / 100));
+        Client.cards[id].balance -= (sum + (sum * Client.cards[id].commission / 100));
     }
     public static void combinedMethod (int id1, int id2, double sum){
         ActionsForTransfers.infoClientName();
