@@ -12,15 +12,34 @@ public class TransferBetweenCards {
             System.out.println("Not enough money");
         } else if (summaTransfer > Client.carts[idCard_1].limit){
             System.out.println("Transfer is not possible, the transfer amount limit has been exceeded");
-        } else {
-            System.out.println(Client.client_1.firstName + " " + Client.client_1.lastName);
-            System.out.println("cards in stock: " + Client.carts.length);
-            System.out.println("balance before transfer: " + Client.carts[idCard_1].balance);
-            Client.carts[idCard_1].balance -= summaTransfer - (Client.carts[idCard_1].balance * Client.carts[idCard_1].commission / 100);
-            System.out.println("balance after transfer: " + Client.carts[idCard_1].balance);
-            System.out.println("balance before transfer: " + Client.carts[idCard_2].balance);
+        } else if (Client.carts[idCard_1].currency == Client.carts[idCard_2].currency){
+            ActionsForTransfers.combinedMethod(idCard_1, idCard_2, summaTransfer);
             Client.carts[idCard_2].balance += summaTransfer;
-            System.out.println("balance after transfer: " + Client.carts[idCard_2].balance);
+            ActionsForTransfers.infoBalanceCartAfterT(idCard_2);
+        } else if (Client.carts[idCard_1].currency == "BYN" && Client.carts[idCard_2].currency == "USD"){
+            ActionsForTransfers.combinedMethod(idCard_1, idCard_2, summaTransfer);
+            Client.carts[idCard_2].balance += (summaTransfer / 3.2);
+            ActionsForTransfers.infoBalanceCartAfterT(idCard_2);
+        } else if (Client.carts[idCard_1].currency == "USD" && Client.carts[idCard_2].currency == "BYN") {
+            ActionsForTransfers.combinedMethod(idCard_1, idCard_2, summaTransfer);
+            Client.carts[idCard_2].balance += (summaTransfer * 3.2);
+            ActionsForTransfers.infoBalanceCartAfterT(idCard_2);
+        } else if (Client.carts[idCard_1].currency == "BYN" && Client.carts[idCard_2].currency == "Euro") {
+            ActionsForTransfers.combinedMethod(idCard_1, idCard_2, summaTransfer);
+            Client.carts[idCard_2].balance += (summaTransfer / 3.5);
+            ActionsForTransfers.infoBalanceCartAfterT(idCard_2);
+        } else if (Client.carts[idCard_1].currency == "Euro" && Client.carts[idCard_2].currency == "BYN") {
+            ActionsForTransfers.combinedMethod(idCard_1, idCard_2, summaTransfer);
+            Client.carts[idCard_2].balance += (summaTransfer * 3.5);
+            ActionsForTransfers.infoBalanceCartAfterT(idCard_2);
+        } else if (Client.carts[idCard_1].currency == "Euro" && Client.carts[idCard_2].currency == "USD") {
+            ActionsForTransfers.combinedMethod(idCard_1, idCard_2, summaTransfer);
+            Client.carts[idCard_2].balance += (summaTransfer * 1.12);
+            ActionsForTransfers.infoBalanceCartAfterT(idCard_2);
+        } else if (Client.carts[idCard_1].currency == "USD" && Client.carts[idCard_2].currency == "Euro") {
+            ActionsForTransfers.combinedMethod(idCard_1, idCard_2, summaTransfer);
+            Client.carts[idCard_2].balance += (summaTransfer * 0.98);
+            ActionsForTransfers.infoBalanceCartAfterT(idCard_2);
         }
     }
 }
