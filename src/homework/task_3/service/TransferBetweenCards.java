@@ -18,29 +18,21 @@ public class TransferBetweenCards {
             ActionsForTransfers.combinedMethod(idCard_1, idCard_2, summaTransfer);
             Client.cards[idCard_2].balance += summaTransfer;
             ActionsForTransfers.infoBalanceCartAfterT(idCard_2);
-        } else if (Client.cards[idCard_1].currency == "BYN" && Client.cards[idCard_2].currency == "USD"){
+        } else if (Client.cards[idCard_1].currency != Client.cards[idCard_2].currency){
             ActionsForTransfers.combinedMethod(idCard_1, idCard_2, summaTransfer);
-            Client.cards[idCard_2].balance += (summaTransfer / 3.2);
-            ActionsForTransfers.infoBalanceCartAfterT(idCard_2);
-        } else if (Client.cards[idCard_1].currency == "USD" && Client.cards[idCard_2].currency == "BYN") {
-            ActionsForTransfers.combinedMethod(idCard_1, idCard_2, summaTransfer);
-            Client.cards[idCard_2].balance += (summaTransfer * 3.2);
-            ActionsForTransfers.infoBalanceCartAfterT(idCard_2);
-        } else if (Client.cards[idCard_1].currency == "BYN" && Client.cards[idCard_2].currency == "Euro") {
-            ActionsForTransfers.combinedMethod(idCard_1, idCard_2, summaTransfer);
-            Client.cards[idCard_2].balance += (summaTransfer / 3.5);
-            ActionsForTransfers.infoBalanceCartAfterT(idCard_2);
-        } else if (Client.cards[idCard_1].currency == "Euro" && Client.cards[idCard_2].currency == "BYN") {
-            ActionsForTransfers.combinedMethod(idCard_1, idCard_2, summaTransfer);
-            Client.cards[idCard_2].balance += (summaTransfer * 3.5);
-            ActionsForTransfers.infoBalanceCartAfterT(idCard_2);
-        } else if (Client.cards[idCard_1].currency == "Euro" && Client.cards[idCard_2].currency == "USD") {
-            ActionsForTransfers.combinedMethod(idCard_1, idCard_2, summaTransfer);
-            Client.cards[idCard_2].balance += (summaTransfer * 1.12);
-            ActionsForTransfers.infoBalanceCartAfterT(idCard_2);
-        } else if (Client.cards[idCard_1].currency == "USD" && Client.cards[idCard_2].currency == "Euro") {
-            ActionsForTransfers.combinedMethod(idCard_1, idCard_2, summaTransfer);
-            Client.cards[idCard_2].balance += (summaTransfer * 0.98);
+            if (Client.cards[idCard_1].currency == "BYN" && Client.cards[idCard_2].currency == "USD"){
+                Client.cards[idCard_2].balance += (summaTransfer / 3.2);
+            } else if (Client.cards[idCard_1].currency == "USD" && Client.cards[idCard_2].currency == "BYN") {
+                Client.cards[idCard_2].balance += (summaTransfer * 3.2);
+            } else if (Client.cards[idCard_1].currency == "BYN" && Client.cards[idCard_2].currency == "Euro") {
+                Client.cards[idCard_2].balance += (summaTransfer / 3.5);
+            } else if (Client.cards[idCard_1].currency == "Euro" && Client.cards[idCard_2].currency == "BYN") {
+                Client.cards[idCard_2].balance += (summaTransfer * 3.5);
+            } else if (Client.cards[idCard_1].currency == "Euro" && Client.cards[idCard_2].currency == "USD") {
+                Client.cards[idCard_2].balance += (summaTransfer * 1.12);
+            } else if (Client.cards[idCard_1].currency == "USD" && Client.cards[idCard_2].currency == "Euro") {
+                Client.cards[idCard_2].balance += (summaTransfer * 0.98);
+            }
             ActionsForTransfers.infoBalanceCartAfterT(idCard_2);
         }
     }
