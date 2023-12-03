@@ -7,7 +7,7 @@ public class Client{
     public String lastName;
     public String passportNumber;
     public String dateOfBirth;
-    public BaseCard[] cards;
+    public  BaseCard[] cards;
 
     public Client(String firstName, String lastName, String passportNumber, String dateOfBirth,
                   int postcode, String country, String city, String street, int houseNumber, int apartmentNumber) {

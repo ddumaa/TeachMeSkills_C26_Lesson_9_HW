@@ -15,6 +15,6 @@ public class ClientBase {
     static BaseCard visaCard2Client_1 = new VisaCard(2236_5202_4111_3412L, 614, 1102.00, 3, VisaCard.limit, VisaCard.commission, VisaCard.currency);
     static BaseCard masterCard1Client_1 = new MasterCard(3214_7851_0000_4158L, 178, 102.3, 4, MasterCard.limit, MasterCard.commission, MasterCard.currency);
     static BaseCard masterCard2Client_1 = new MasterCard(3408_1483_0000_3491L, 324, 505, 5, MasterCard.limit, MasterCard.commission, MasterCard.currency);
-    public static BaseCard[] cards = new BaseCard[]{belCart1Client_1, belCart2Client_1, visaCard1Client_1, visaCard2Client_1, masterCard1Client_1, masterCard2Client_1};
+    public static BaseCard[] cardsDavid = {belCart1Client_1, belCart2Client_1, visaCard1Client_1, visaCard2Client_1, masterCard1Client_1, masterCard2Client_1};
 
 }
