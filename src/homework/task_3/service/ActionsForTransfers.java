@@ -1,6 +1,5 @@
 package homework.task_3.service;
 
-import homework.task_3.client.Client;
 import homework.task_3.client.ClientBase;
 
 public abstract class ActionsForTransfers {
