@@ -1,22 +1,23 @@
 package homework.task_3.service;
 
 import homework.task_3.client.Client;
+import homework.task_3.client.ClientBase;
 
 public abstract class ActionsForTransfers {
     public static void infoClientName(){
-        System.out.println(Client.client_1.firstName + " " + Client.client_1.lastName);
+        System.out.println(ClientBase.client_1.firstName + " " + ClientBase.client_1.lastName);
     }
     public static void infoClientCartStock(){
-        System.out.println("cards in stock: " + Client.cards.length);
+        System.out.println("cards in stock: " + ClientBase.cards.length);
     }
     public static void infoBalanceCartBeforeT(int id){
-        System.out.println("balance before transfer: " + Client.cards[id].balance);
+        System.out.println("balance before transfer: " + ClientBase.cards[id].balance);
     }
     public static void infoBalanceCartAfterT(int id){
-        System.out.println("balance after transfer: " + Client.cards[id].balance);
+        System.out.println("balance after transfer: " + ClientBase.cards[id].balance);
     }
     public static void balanceWithdrawal(int id, double sum){
-        Client.cards[id].balance -= (sum + (sum * Client.cards[id].commission / 100));
+        ClientBase.cards[id].balance -= (sum + (sum * ClientBase.cards[id].commission / 100));
     }
     public static void combinedMethod (int id1, int id2, double sum){
         ActionsForTransfers.infoClientName();

@@ -1,5 +1,10 @@
 package homework.task_3;
 
+import homework.task_3.cart.BaseCard;
+import homework.task_3.cart.BelCard;
+import homework.task_3.cart.MasterCard;
+import homework.task_3.cart.VisaCard;
+import homework.task_3.client.Client;
 import homework.task_3.service.TransferBetweenCards;
 
 import java.util.Scanner;
