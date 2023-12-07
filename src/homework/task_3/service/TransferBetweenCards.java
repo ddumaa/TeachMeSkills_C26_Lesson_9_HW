@@ -2,7 +2,6 @@ package homework.task_3.service;
 
 import homework.task_3.cart.BaseCard;
 import homework.task_3.client.Client;
-import homework.task_3.client.ClientBase;
 
 public class TransferBetweenCards {
     public static void transferMoney(Client client_1, BaseCard[] cardsDavid, int idCard_1, int idCard_2, double summaTransfer){
