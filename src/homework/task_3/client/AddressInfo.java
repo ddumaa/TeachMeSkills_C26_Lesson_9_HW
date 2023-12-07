@@ -1,10 +1,10 @@
 package homework.task_3.client;
 
-public abstract class AddressInfo {
-    public static int postcode;
-    public static String country;
-    public static String city;
-    public static String street;
-    public static int houseNumber;
-    public static int apartmentNumber;
+public class AddressInfo {
+    public int postcode;
+    public String country;
+    public String city;
+    public String street;
+    public int houseNumber;
+    public int apartmentNumber;
 }
